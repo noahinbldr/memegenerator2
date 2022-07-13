@@ -5,8 +5,11 @@ let likeBtn = document.getElementById("like");
 let nextBtn = document.getElementById("next");
 let previousBtn = document.getElementById("previous");
 let id = 1;
-let darkMode = document.getElementById("dark");
-let lightMode = document.getElementById("light");
+
+const chk = document.getElementById("chk");
+chk.addEventListener("change", () => {
+  document.body.classList.toggle("dark");
+});
 
 function renderMemes(meme) {
   let memeImg = document.createElement("img");
@@ -21,15 +24,6 @@ function showMeme(meme) {
 
 function moveMeme(meme) {
   console.log("testing this button");
-}
-
-function toggleDarkMode() {
-  alert("DARK MODE");
-  // pushing new files for merge
-}
-
-function toggleLightMode() {
-  alert("LIGHT MODE");
 }
 
 function previousMeme() {
@@ -62,8 +56,6 @@ function app() {
   likeBtn.addEventListener("click", moveMeme);
   nextBtn.addEventListener("click", nextMeme);
   previousBtn.addEventListener("click", previousMeme);
-  lightMode.addEventListener("click", toggleLightMode);
-  darkMode.addEventListener("click", toggleDarkMode);
 }
 
 app();
