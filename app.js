@@ -5,6 +5,8 @@ let likeBtn = document.getElementById("like");
 let nextBtn = document.getElementById("next");
 let previousBtn = document.getElementById("previous");
 let id = 1;
+let memeDisplay = document.getElementById("meme-display");
+let memeObjArr = [];
 
 const chk = document.getElementById("chk");
 chk.addEventListener("change", () => {
@@ -19,11 +21,16 @@ function renderMemes(meme) {
 }
 
 function showMeme(meme) {
+  memeDisplay.dataset.id = meme.id;
   memeDispImg.src = meme.url;
 }
 
-function moveMeme(meme) {
-  console.log("testing this button");
+function renderFavorite() {
+  let id = parseInt(memeDisplay.dataset.id);
+  let meme = memeObjArr.find((memeObj) => memeObj.id === id);
+  let favoriteImg = document.createElement("img");
+  favoriteImg.src = meme.url;
+  memeNavRight.append(favoriteImg);
 }
 
 function previousMeme() {
@@ -49,11 +56,12 @@ function app() {
     .then((res) => res.json())
     .then((memesArr) => {
       memesArr.forEach((meme) => {
+        memeObjArr.push(meme);
         renderMemes(meme);
       });
       showMeme(memesArr[0]);
     });
-  likeBtn.addEventListener("click", moveMeme);
+  likeBtn.addEventListener("click", renderFavorite);
   nextBtn.addEventListener("click", nextMeme);
   previousBtn.addEventListener("click", previousMeme);
 }

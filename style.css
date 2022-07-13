@@ -1,3 +1,4 @@
+/* Light and Dark Mode */
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 * {
@@ -66,13 +67,15 @@ body.dark {
   font-family: 'Montserrat';
   font-weight: 800;
 }
-
-/* testing^^^^ */
+/* Light and Dark Mode */
 
 body {
   background-color: #fafafa;
   text-align: center;
+  position: relative;
 }
+
+#meme-nav-left, #meme-nav-right, 
 
 #meme-nav-left {
   display: block;
@@ -85,12 +88,20 @@ body {
 #meme-nav-right {
   display: block;
   justify-content: right;
-  position: absolute;
+  position: relative;
+  left: 75%;
   width: 25%;
   cursor: pointer;
 }
 
 #meme-nav-left img {
+  width: 75px;
+  height: 75px;
+  border: solid black 2px;
+  margin: 0.3em;
+}
+
+#meme-nav-right img {
   width: 75px;
   height: 75px;
   border: solid black 2px;
@@ -214,16 +225,3 @@ body {
 }
 
 /* buttons */
-
-#new-meme-form {
-  color: white;
-}
-
-form {
-  background: transparent;
-  margin: 2em;
-}
-
-form label {
-  display: block;
-}
