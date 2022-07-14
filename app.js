@@ -77,7 +77,7 @@ function app() {
   // down arrow - 40
   // left arrow - 37
   // right arrow - 39
-  // document.addEventListener(keydown(keycode??), nextMeme/previousMeme)
+  // document.addEventListener(keydown(keycode??), nextMeme or previousMeme)
 }
 
 app();
