@@ -97,14 +97,21 @@ body.dark {
 }
 
 /* elements */
+.navbar-header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 #header-title {
   color: white;
   font-family: 'Rubik Moonrocks';
   font-weight: 800;
   cursor: pointer;
   font-size: 60px;
-  text-align: center;
+  align-items: center;
   display: flex;
+  margin-bottom: 0;
 }
 
 #meme-container {
