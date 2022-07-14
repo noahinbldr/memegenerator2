@@ -53,6 +53,13 @@ body.dark {
   padding-left: 190px;
 }
 
+#mode {
+  padding-right: 1280px;
+  font-family: 'Montserrat';
+  font-weight: 800;
+}
+/* Light and Dark Mode */
+
 /* buttons */
 #next {
   display: inline-block;
@@ -139,16 +146,19 @@ body {
 
 #meme-nav-left img {
   width: 5.2vw;
-  height: 7.85vh;
+  height: 7.7vh;
   border: solid black 2px;
-  margin:0.3399em;
+  padding: 5px;
+  margin-left: 0.175em;
+  margin-right: 0.175em;
+
 }
 
 #meme-nav-right img {
   width: 5.2vw;
-  height: 7.85vh;
+  height: 7.7vh;
   border: solid black 2px;
-  margin:0.3399em;
+  margin: 0.3em;
 }
 
 #meme-display img {
