@@ -5,3 +5,4 @@ User Stories
  - As a user, I can filter through the memes by clicking on them, using the buttons or using the arrow keys.
  - As a user, I can add the currently displayed meme to my favorites, which moves it to another area on the screen.
  - As a user, I can toggle between light and dark mode to change themes.
+ - As a user, I can click on the navbar title for a little surprise!
