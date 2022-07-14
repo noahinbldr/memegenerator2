@@ -2,10 +2,13 @@
 <html lang="en" dir="ltr">
 
 <head>
-
+  <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+
+  <!-- BOOTSTRAP -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -13,33 +16,27 @@
   <script defer src="app.js" charset="utf-8"></script>
   <link rel="stylesheet" href="style.css">
   <title>Meme Machine</title>
-
 </head>
 
 <body>
 
   <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">DeeZ BoiZ</a>
+        <a id="header-title" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">MEME MACHINE</a>
       </div>
     </div>
   </nav>
 
-  <h2 id="mode">Toggle Light/Dark Mode</h2>
-
   <div id="toggler">
     <input type="checkbox" class="checkbox" id="chk" />
     <label class="label" for="chk">
-      <i class="fas fa-moon"></i>
-      <i class="fas fa-sun"></i>
       <div class="ball"></div>
     </label>
   </div>
 
   <div id="meme-container">
     <div id="meme-nav-left">
-      <!-- left memes section -->
+      <!-- LEFT MEMES SECTION -->
     </div>
 
     <div id="display-container">
@@ -56,7 +53,7 @@
     </div>
 
     <div id="meme-nav-right">
-      <!-- right memes section -->
+      <!-- RIGHT MEMES SECTION -->
     </div>
   </div>
 
