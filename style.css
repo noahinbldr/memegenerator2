@@ -53,12 +53,6 @@ body.dark {
   padding-left: 190px;
 }
 
-#mode {
-  padding-right: 1280px;
-  font-family: 'Montserrat';
-  font-weight: 800;
-}
-
 /* buttons */
 #next {
   display: inline-block;
@@ -103,6 +97,16 @@ body.dark {
 }
 
 /* elements */
+#header-title {
+  color: white;
+  font-family: 'Rubik Moonrocks';
+  font-weight: 800;
+  cursor: pointer;
+  font-size: 60px;
+  text-align: center;
+  display: flex;
+}
+
 #meme-container {
   display: flex;
   justify-content: space-between;
