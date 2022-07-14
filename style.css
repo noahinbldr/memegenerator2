@@ -136,22 +136,20 @@ body {
 }
 
 #meme-nav-left {
-  width: 25vw;
-  height:75vh;
+  width: 25%;
   cursor: pointer;
   border: 10px solid black
 }
 
 #meme-nav-right {
-  width: 25vw;
-  height: 75vh;
+  width: 25%;
   cursor: pointer;
   border: 10px solid black;
 }
 
 #meme-nav-left img {
-  width: 5.2vw;
-  height: 7.7vh;
+  width: 75px;
+  height: 75px;
   border: solid black 2px;
   padding: 5px;
   margin-left: 0.175em;
@@ -160,10 +158,12 @@ body {
 }
 
 #meme-nav-right img {
-  width: 5.2vw;
-  height: 7.7vh;
+  width: 75px;
+  height: 75px;
   border: solid black 2px;
-  margin: 0.3em;
+  padding: 5px;
+  margin-left: 0.175em;
+  margin-right: 0.175em;
 }
 
 #meme-display img {
