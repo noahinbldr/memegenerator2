@@ -114,6 +114,11 @@ body.dark {
   margin-bottom: 0;
 }
 
+#header-title:hover {
+  text-decoration: none;
+}
+
+
 #meme-container {
   display: flex;
   justify-content: space-between;
