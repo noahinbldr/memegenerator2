@@ -124,29 +124,31 @@ body {
 }
 
 #meme-nav-left {
-  width: 25%;
+  width: 25vw;
+  height:75vh;
   cursor: pointer;
   border: 10px solid black
 }
 
 #meme-nav-right {
-  width: 25%;
+  width: 25vw;
+  height: 75vh;
   cursor: pointer;
   border: 10px solid black;
 }
 
 #meme-nav-left img {
-  width: 75px;
-  height: 75px;
+  width: 5.2vw;
+  height: 7.85vh;
   border: solid black 2px;
-  margin: 0.3em;
+  margin:0.3399em;
 }
 
 #meme-nav-right img {
-  width: 75px;
-  height: 75px;
+  width: 5.2vw;
+  height: 7.85vh;
   border: solid black 2px;
-  margin: 0.3em;
+  margin:0.3399em;
 }
 
 #meme-display img {
