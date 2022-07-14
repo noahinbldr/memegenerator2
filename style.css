@@ -1,4 +1,4 @@
-/* Light and Dark Mode */
+/* TOGGLER */
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 * {
@@ -53,7 +53,28 @@ body.dark {
   padding-left: 190px;
 }
 
-/* buttons */
+/* BUTTONS */
+#like {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid black;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: black;
+  text-align: center;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+#like:hover {
+  color: white;
+  background-color: black;
+}
+
 #next {
   display: inline-block;
   padding: 0.35em 1.2em;
@@ -96,7 +117,7 @@ body.dark {
   background-color: black;
 }
 
-/* elements */
+/* ELEMENTS */
 .navbar-header {
   display: flex;
   justify-content: center;
