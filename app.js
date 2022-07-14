@@ -43,7 +43,7 @@ function previousMeme() {
 }
 
 function nextMeme() {
-  if (id < 20) {
+  if (id < 32) {
     id += 1;
     fetchSingleMeme(id);
   } else {
