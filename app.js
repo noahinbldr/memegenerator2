@@ -51,6 +51,7 @@ function renderFavorite() {
   memeNavRight.append(favoriteImg);
 }
 
+//RED BORDER
 function clearRedBorder() {
   let imageItems = memeNavLeft.querySelectorAll("img");
   let currentImage = imageItems[currentIndex];
