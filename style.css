@@ -168,6 +168,10 @@ body {
   border: 10px solid black;
 }
 
+.meme-red-border {
+  border: solid red 4px !important;
+}
+
 #meme-nav-left img {
   width: 75px;
   height: 75px;

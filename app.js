@@ -5,9 +5,10 @@ let memeDispImg = document.getElementById("meme-display-image");
 let likeBtn = document.getElementById("like");
 let nextBtn = document.getElementById("next");
 let previousBtn = document.getElementById("previous");
-let id = 1;
 let memeDisplay = document.getElementById("meme-display");
+let currentIndex = 0;
 let memeObjArr = [];
+let favoritedObjArr = [];
 
 //TOGGLER
 const chk = document.getElementById("chk");
@@ -19,12 +20,19 @@ chk.addEventListener("change", () => {
 function renderMemes(meme) {
   let memeImg = document.createElement("img");
   memeImg.src = meme.url;
-  memeImg.addEventListener("click", () => showMeme(meme));
+  memeImg.addEventListener("click", () => {
+    clearRedBorder();
+    showMeme(meme);
+  });
   memeNavLeft.append(memeImg);
 }
 
 //CENTER DISPLAY
 function showMeme(meme) {
+  currentIndex = memeObjArr.findIndex((memeObj) => meme.id === memeObj.id);
+  let imageItems = memeNavLeft.querySelectorAll("img");
+  let currentImage = imageItems[currentIndex];
+  currentImage.classList.add("meme-red-border");
   memeDisplay.dataset.id = meme.id;
   memeDispImg.src = meme.url;
 }
@@ -32,30 +40,43 @@ function showMeme(meme) {
 //ADD TO FAVORITES
 function renderFavorite() {
   let id = parseInt(memeDisplay.dataset.id);
+  let foundFavorited = favoritedObjArr.find((memeObj) => memeObj.id === id);
+  if (foundFavorited) {
+    return;
+  }
   let meme = memeObjArr.find((memeObj) => memeObj.id === id);
+  favoritedObjArr.push(meme);
   let favoriteImg = document.createElement("img");
   favoriteImg.src = meme.url;
   memeNavRight.append(favoriteImg);
 }
 
+function clearRedBorder() {
+  let imageItems = memeNavLeft.querySelectorAll("img");
+  let currentImage = imageItems[currentIndex];
+  currentImage.classList.remove("meme-red-border");
+}
+
 //PREVIOUS
 function previousMeme() {
-  if (id > 1) {
-    id -= 1;
-    fetchSingleMeme(id);
-  } else {
-    alert("No more memes!");
+  clearRedBorder();
+  currentIndex -= 1;
+  if (currentIndex < 0) {
+    currentIndex = memeObjArr.length - 1;
   }
+  let id = memeObjArr[currentIndex].id;
+  fetchSingleMeme(id);
 }
 
 //NEXT
 function nextMeme() {
-  if (id < 32) {
-    id += 1;
-    fetchSingleMeme(id);
-  } else {
-    alert("No more memes!");
+  clearRedBorder();
+  currentIndex += 1;
+  if (currentIndex >= memeObjArr.length) {
+    currentIndex = 0;
   }
+  let id = memeObjArr[currentIndex].id;
+  fetchSingleMeme(id);
 }
 
 //INIT FETCH (ARR)
@@ -73,11 +94,16 @@ function app() {
   nextBtn.addEventListener("click", nextMeme);
   previousBtn.addEventListener("click", previousMeme);
 
-  // up arrow - 38
-  // down arrow - 40
-  // left arrow - 37
-  // right arrow - 39
-  // document.addEventListener(keydown(keycode??), nextMeme/previousMeme)
+  //KEYDOWN
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+      nextMeme();
+    } else if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      previousMeme();
+    }
+  });
 }
 
 app();
