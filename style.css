@@ -176,14 +176,16 @@ body {
   width: 75px;
   height: 75px;
   border: solid black 2px;
-  margin: 0.3em;
+  margin-left: 0.175em;
+  margin-right:0.175em;
 }
 
 #meme-nav-right img {
   width: 75px;
   height: 75px;
   border: solid black 2px;
-  margin: 0.3em;
+  margin-left: 0.175em;
+  margin-right:0.175em;
 }
 
 #meme-display img {
